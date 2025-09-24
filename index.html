@@ -2,17 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbot Naranjita</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Fondo negro */
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 250px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+
+    /* Ajustes responsivos */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.3rem;
+      }
+      .logo {
+        max-width: 180px;
+      }
+    }
+  </style>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
+  <!-- Logo centrado -->
+  <img src="logo.png" alt="Logo Tec InnovAction Lab" class="logo">
+
   <h1>Hola, soy TecLabAssistant</h1>
 
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="Tec Innovaction Lab Assistant"
-  agent-id="24c97561-37db-479c-a1ac-bd8df4df1fa9"
-  language-code="es"
-></df-messenger>
+  <!-- Chat flotante -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="TecLab_Assistant"
+    agent-id="24c97561-37db-479c-a1ac-bd8df4df1fa9"
+    language-code="es"
+  ></df-messenger>
 </body>
 </html>
